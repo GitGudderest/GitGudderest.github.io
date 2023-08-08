@@ -1,0 +1,15 @@
+<Html>
+  <head>
+    <script>
+      function exec() {
+        let tr = document.getElementById("textarea");
+        eval(tr.innerText);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Hi!</h1>
+    <button onclick="exec()">Eval!</button>
+    <textarea id="textarea"></textarea>
+  </body>
+</Html>
