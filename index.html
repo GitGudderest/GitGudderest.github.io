@@ -2,8 +2,10 @@
   <head>
     <script>
       function exec() {
-        let tr = document.getElementById("textarea");
-        eval(tr.value);
+        let input = document.getElementById("input");
+        let output = document.getElementById("output");
+        let f = new function(input.value);
+        output.value = f();
       }
     </script>
   </head>
@@ -11,6 +13,11 @@
     <h1>Hi!</h1>
     <button onclick="exec()">Eval!</button>
     </br>
-    <textarea id="textarea"></textarea>
+    input:
+    </br>
+    <textarea id="output"></textarea>
+  </br>
+    output:
+  </br>
   </body>
 </Html>
