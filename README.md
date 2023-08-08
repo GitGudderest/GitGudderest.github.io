@@ -1,3 +1,3 @@
 # GitGudderest.github.io
 
-sometext [gitgudderest.github.io]
+[gitgudderest.github.io](gitgudderest.github.io)
