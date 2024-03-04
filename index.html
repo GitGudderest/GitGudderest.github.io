@@ -16,7 +16,10 @@
 
       function autoExec() {
         const interval = 5 * 1000; // 5 seconds
-        setInterval(exec, interval);
+        const intervalId = setInterval(exec, interval);
+        if (!window.auto) {
+          clearInterval(intervalId);
+        }
       }
 
       
