@@ -2,10 +2,22 @@
   <head>
     <script>
       function exec() {
-        let input = document.getElementById("input");
-        let output = document.getElementById("output");
-        let f = new Function(`return ${input.value}`);
-        output.value = f();
+        try {
+          let input = document.getElementById("input");
+          let output = document.getElementById("output");
+          let f = new Function(`return ${input.value}`);
+          output.value = f();
+        }
+        catch (e) {
+          let output = document.getElementById("output");
+          output.value = `${e.name}: ${e.message}`;
+        }
+      }
+
+      function autoExec() {
+        const interval = 5 * 1000; // 5 seconds
+        setInterval(exec, interval);
+        
       }
     </script>
   </head>
